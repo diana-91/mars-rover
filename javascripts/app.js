@@ -1,3 +1,7 @@
+window.onload = function(){
+	 document.getElementById('env_comand').addEventListener('click',listCommands,false);
+};
+
 // Rover Object Goes Here
 // ======================
 
@@ -231,7 +235,9 @@ function validateF(commands){
 // Función que recibe:
 //@commands el comando introducido para girar o mover a rover
 //@rover objeto que queremos mover
-function listCommands(commands) {
+function listCommands() {
+	var commands = document.getElementById('comand').value;
+	//alert(commands);
     var rover=turnoRover();
     var obs=false;
     var validate = validateF(commands);
